@@ -18,11 +18,15 @@ class Garden::CareMomentsController < ApplicationController
       format.html { redirect_to redirection_path }
 
       format.js do
-        @plant = PlantQuery.relation(current_user.plants).
+        @plant   = PlantQuery.relation(current_user.plants).
           include_care_status.
           find(@plant.id)
+        @plant   = PlantPresenter.new(@plant)
 
         @moments = @plant.care_moments.order("date DESC")
+        @user    = UserPresenter.new(current_user)
+
+        @last_level = User::LEVELS.keys.last
 
         render :create
         flash.clear
