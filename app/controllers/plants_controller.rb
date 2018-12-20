@@ -5,9 +5,14 @@ class PlantsController < ApplicationController
     @query  = params[:query]
     pattern = @query.presence || '*'
 
+    aggs     = [:age_in_months, :size, :room, :user_level]
+    @filters = params.permit(*aggs)
+
     @search = Plant.search(
       pattern,
+      where: @filters,
       order: { created_at: :desc },
+      aggs:  aggs,
       scope_results: ->(results) { results.includes(:user) }
     )
 
