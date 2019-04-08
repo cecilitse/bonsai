@@ -28,6 +28,7 @@ group :development, :test do
   # Tests
   gem 'factory_bot_rails', '~> 4.0'
   gem 'rspec-rails'
+  gem 'rspec_api_documentation'
   gem 'simplecov', require: false
 
   # System tests
