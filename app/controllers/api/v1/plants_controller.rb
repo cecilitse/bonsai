@@ -5,6 +5,11 @@ module API
         @plants = Plant.order("created_at DESC")
         render json: { plants: @plants }
       end
+
+      def show
+        @plant = Plant.find(params[:id])
+        render json: { plant: @plant }
+      end
     end
   end
 end
