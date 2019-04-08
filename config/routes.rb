@@ -1,3 +1,5 @@
+require 'api_constraints'
+
 Rails.application.routes.draw do
   root to: 'pages#home'
 
@@ -16,6 +18,11 @@ Rails.application.routes.draw do
     resources :plants do
       resource  :favorite,     only: [:create, :destroy]
       resources :care_moments, only: [:create]
+    end
+  end
+
+  namespace :api, defaults: { format: 'json' } do
+    scope module: :v1, constraints: ApiConstraints.new(version: 1) do
     end
   end
 end
