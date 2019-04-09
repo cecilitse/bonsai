@@ -9,7 +9,7 @@
       <div class="plant-details">
         <p>
           I'm <strong> <%= pluralize @plant.age_in_months, 'month' %></strong> old,
-          I'm <strong><%= human_plant_size(@plant) %></strong>
+          I'm <strong><%= @plant.human_size %></strong>
           and you can find me in the <strong><%= @plant.room %></strong>.
         </p>
         <p>

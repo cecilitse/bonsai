@@ -7,6 +7,8 @@ class PlantsController < ApplicationController
 
   def show
     @plant = Plant.find(params[:id])
+    @plant = PlantPresenter.new(@plant)
+
     @gardener_other_plants = @plant.user.plants.where.not(id: @plant.id)
   end
 end

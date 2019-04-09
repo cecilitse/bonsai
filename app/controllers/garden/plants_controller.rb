@@ -9,6 +9,7 @@ class Garden::PlantsController < ApplicationController
     @plant   = PlantQuery.relation(current_user.plants).
       include_care_status.
       find(params[:id])
+    @plant   = PlantPresenter.new(@plant)
 
     @moments = @plant.care_moments.order("date DESC")
   end
