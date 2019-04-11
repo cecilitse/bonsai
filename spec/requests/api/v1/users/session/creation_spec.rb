@@ -1,11 +1,7 @@
 require 'rails_helper'
 
-RSpec.describe 'Users - Session creation', type: :request do
+RSpec.describe 'Users - Session creation', version: 1, type: :request do
   let!(:cecile) { create(:user, id: 1, email: 'cecile@mail.com', password: 'coucoulechat') }
-
-  let(:headers) do
-    { 'Accept' => 'application/json;version=1' }
-  end
 
   before :each do
     allow(Rails.application).to receive(:secret_key_base).and_return('3b09b46f0daa01f1de9762531c9a2ce3')
@@ -22,7 +18,7 @@ RSpec.describe 'Users - Session creation', type: :request do
     end
 
     it 'signs in a user' do
-      post '/api/users/session', headers: headers, params: params
+      post '/api/users/session', headers: accept_header, params: params
       json_response = JSON.parse(response.body)
 
       expect(response.status).to        eq(200)
@@ -41,7 +37,7 @@ RSpec.describe 'Users - Session creation', type: :request do
     end
 
     it 'rejects user sign in' do
-      post '/api/users/session', headers: headers, params: params
+      post '/api/users/session', headers: accept_header, params: params
       expect(response.status).to eq(401)
     end
   end
@@ -57,7 +53,7 @@ RSpec.describe 'Users - Session creation', type: :request do
     end
 
     it 'rejects user sign in' do
-      post '/api/users/session', headers: headers, params: params
+      post '/api/users/session', headers: accept_header, params: params
       expect(response.status).to eq(401)
     end
   end

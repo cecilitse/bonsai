@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-RSpec.describe 'Plant details', type: :request do
+RSpec.describe 'Plant details', version: 1, type: :request do
   let(:user) { create(:user, nickname: 'Capucine') }
 
   let!(:plant) do
@@ -15,7 +15,7 @@ RSpec.describe 'Plant details', type: :request do
   end
 
   it 'gets plant details' do
-    get "/api/plants/#{plant.id}", headers: { 'Accept' => 'application/json;version=1' }
+    get "/api/plants/#{plant.id}", headers: accept_header
 
     expect(response.status).to eq(200)
 

@@ -1,17 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe 'Garden - Plant creation', type: :request do
-  let!(:user)       { create(:user, email: 'nicolas@mail.com', password: 'amazing-plants') }
-
-  let(:auth_token)  { Users::AuthenticateService.new(email: user.email, password: user.password).call }
-  let(:photo_url)   { 'https://www.truffaut.com/jardin/plantes-interieur/plantes-vertes-interieur/PublishingImages/dossiers-conseils/dc-sarracenias-plante-carnivore/sarracenias-b.jpg' }
-
-  let(:headers) do
-    {
-      'Accept'        => 'application/json;version=1',
-      'Authorization' => auth_token
-    }
-  end
+RSpec.describe 'Garden - Plant creation', version: 1, type: :request do
+  let!(:user)     { create(:user, email: 'nicolas@mail.com', password: 'amazing-plants') }
+  let(:photo_url) { 'https://www.truffaut.com/jardin/plantes-interieur/plantes-vertes-interieur/PublishingImages/dossiers-conseils/dc-sarracenias-plante-carnivore/sarracenias-b.jpg' }
 
   let(:params) do
     {
@@ -26,7 +17,7 @@ RSpec.describe 'Garden - Plant creation', type: :request do
   end
 
   it 'creates a plant' do
-    post '/api/garden/plants/', headers: headers, params: params
+    post '/api/garden/plants/', headers: auth_headers(user), params: params
 
     expect(response.status).to eq(201)
 
@@ -44,7 +35,9 @@ RSpec.describe 'Garden - Plant creation', type: :request do
   end
 
   context 'when user has an incorrect token' do
-    let(:auth_token)  { 'incorrect-token' }
+    let(:headers) do
+      accept_header.merge('Authorization' => nil)
+    end
 
     it 'creates a plant for the user' do
       post '/api/garden/plants/', headers: headers, params: params
