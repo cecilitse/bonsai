@@ -9,7 +9,7 @@ module API
           plant.user = current_user
 
           if plant.save
-            render json: { plant: plant }, status: :created
+            render json: PlantSerializer.render(plant, root: :plant), status: :created
           else
             render json: { errors: plant.errors.messages }, status: :unprocessable_entity
           end
