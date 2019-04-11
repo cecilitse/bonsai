@@ -10,6 +10,7 @@ gem 'puma', '~> 3.11'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # own gems
+gem 'blueprinter'
 gem 'devise'
 gem 'jwt'
 gem 'simple_form'
