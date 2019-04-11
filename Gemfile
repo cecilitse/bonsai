@@ -11,6 +11,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 # own gems
 gem 'devise'
+gem 'jwt'
 gem 'simple_form'
 
 # assets

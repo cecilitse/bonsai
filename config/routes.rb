@@ -23,6 +23,10 @@ Rails.application.routes.draw do
 
   namespace :api, defaults: { format: 'json' } do
     scope module: :v1, constraints: ApiConstraints.new(version: 1) do
+      namespace :users do
+        resource :session, only: [:create]
+      end
+
       resources :plants, only: [:index, :show]
     end
   end
