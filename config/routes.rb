@@ -28,6 +28,10 @@ Rails.application.routes.draw do
       end
 
       resources :plants, only: [:index, :show]
+
+      namespace :garden do
+        resources :plants, only: [:create]
+      end
     end
   end
 end
