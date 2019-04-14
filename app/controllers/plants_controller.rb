@@ -10,6 +10,8 @@ class PlantsController < ApplicationController
 
     @search = Plant.search(
       pattern,
+      load: false,
+      fields: [:name, :room, :size, { user: :nickname }],
       where: @filters,
       order: { created_at: :desc },
       aggs:  aggs,

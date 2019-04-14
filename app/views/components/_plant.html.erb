@@ -1,5 +1,5 @@
 <div class="plant">
-  <%= link_to plant_path(plant) do %>
+  <%= link_to plant_path(plant.id) do %>
     <div class="bg-image plant-cover" style="background-image: url('<%= plant.photo_url %>')"></div>
   <% end %>
   <p class="plant-owner"><%= plant.name %> by <%= plant.user.nickname %></p>

@@ -19,9 +19,15 @@ class Plant < ApplicationRecord
       age_in_months: age_in_months,
       size:          size,
       room:          room,
+      photo_url:     photo_url,
       created_at:    created_at,
       user_nickname: user.nickname,
       user_level:    user.level,
+      user: {
+        id: user.id,
+        nickname: user.nickname,
+        level: user.level
+      }
     }
   end
 end
