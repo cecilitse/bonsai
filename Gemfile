@@ -6,7 +6,7 @@ ruby '2.6.6'
 # defaults
 gem 'rails', '~> 5.2.2'
 gem 'sqlite3'
-gem 'puma', '~> 3.12'
+gem 'puma', '~> 4.3'
 gem 'bootsnap', '>= 1.1.0', require: false
 
 # own gems
