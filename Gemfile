@@ -14,7 +14,8 @@ gem 'devise'
 gem 'simple_form'
 
 # assets
-
+gem 'cssbundling-rails'
+gem 'jsbundling-rails'
 
 group :development, :test do
   gem 'pry-rails'
