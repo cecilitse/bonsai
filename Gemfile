@@ -14,6 +14,7 @@ gem 'devise'
 gem 'simple_form'
 
 # assets
+gem 'sprockets-rails'
 gem 'cssbundling-rails'
 gem 'jsbundling-rails'
 
