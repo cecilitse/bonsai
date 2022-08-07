@@ -1,1 +1,14 @@
-// Entry point for your Sass build
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+@import "bootstrap";
+
+@import "components/garden-plants";
+@import "components/plants";
+
+@import "layouts/base";
+
+@import "pages/base";
+@import "pages/garden";
+@import "pages/home";
+@import "pages/plants";
