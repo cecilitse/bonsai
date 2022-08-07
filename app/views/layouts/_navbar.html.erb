@@ -20,7 +20,7 @@
           <%= link_to 'Leaderboard', leaderboard_path, class: 'nav-link' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'nav-link' %>
+          <%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete }, class: 'nav-link' %>
         </li>
       <% else %>
         <li class="nav-item <%= 'active' if request.path == new_user_session_path %>">
@@ -30,4 +30,3 @@
     </ul>
   </div>
 </nav>
-
