@@ -100,7 +100,7 @@ Plant.create!(
   age_in_months: 1,
   size: :small,
   room: 'living-room',
-  photo_url: "https://www.givingplants.com/media/catalog/product/cache/6/image/9df78eab33525d08d6e5fb8d27136e95/g/p/gp4-lb19-grnmtn.jpg",
+  photo_url: "https://i.pinimg.com/736x/51/bf/d8/51bfd8692cb0ea2c8d086207378dba8f.jpg",
   care_moments: [
     CareMoment.new(date: Date.today, code: :water, points: CareMoment::MOMENTS[:water][:points]),
     CareMoment.new(date: Date.today - 7.days, code: :water, points: CareMoment::MOMENTS[:water][:points])
@@ -191,7 +191,7 @@ Plant.create!(
   age_in_months: 9,
   size: :tall,
   room: 'living-room',
-  photo_url: "http://foros.micasarevista.com/var/decoracion/storage/images/mi-casa/ideas/plantas-de-interior/palmeras/180188-1-esl-ES/palmeras_galeria_landscape.jpg",
+  photo_url: "https://bergamotte.imgix.net/59AxBx2x68eqa2T8aQ64HFKB",
   care_moments: [
     CareMoment.new(date: Date.today - 1.days, code: :water, points: CareMoment::MOMENTS[:water][:points]),
     CareMoment.new(date: Date.today - 4.days, code: :water, points: CareMoment::MOMENTS[:water][:points]),
@@ -221,7 +221,7 @@ Plant.create!(
   age_in_months: 2,
   size: :small,
   room: 'bedroom',
-  photo_url: "http://www.dreams.co.uk/sleep-matters-club/wp-content/uploads/2017/03/aloe-vera-plant.jpg",
+  photo_url: "https://i.pinimg.com/originals/8a/ac/23/8aac2325e2a07c207578733d6945a57e.jpg",
   care_moments: [
     CareMoment.new(date: Date.today, code: :water, points: CareMoment::MOMENTS[:water][:points]),
     CareMoment.new(date: Date.today - 4.days, code: :water, points: CareMoment::MOMENTS[:water][:points]),
@@ -247,7 +247,7 @@ Plant.create!(
   age_in_months: 2,
   size: :tall,
   room: 'bedroom',
-  photo_url: "https://cdn.gearpatrol.com/wp-content/uploads/2015/02/House-Plants-Gear-Patrol-Lead-2.jpg",
+  photo_url: "https://www.cdeco.fr/wp-content/uploads/2019/02/xplante-dans-chambre-bloomingville.jpg.pagespeed.ic.U7AlvIsL6S.jpg",
   care_moments: [
     CareMoment.new(date: Date.today - 1.days, code: :water, points: CareMoment::MOMENTS[:water][:points]),
     CareMoment.new(date: Date.today - 4.days, code: :water, points: CareMoment::MOMENTS[:water][:points]),
@@ -260,7 +260,7 @@ Plant.create!(
   age_in_months: 6,
   size: :small,
   room: 'bedroom',
-  photo_url: "http://blog.casper.com/wp-content/uploads/2015/07/TheSill_Succulents_ZZPlant.jpg",
+  photo_url: "https://i.pinimg.com/originals/a5/98/e7/a598e74306c027f3764b0a1f585ff605.jpg",
   care_moments: [
     CareMoment.new(date: Date.today - 1.month, code: :water, points: CareMoment::MOMENTS[:water][:points])
   ]
@@ -271,7 +271,7 @@ Plant.create!(
   age_in_months: 2,
   size: :medium,
   room: 'bedroom',
-  photo_url: "http://dritare.net/wp-content/uploads/2018/01/20-2.jpeg",
+  photo_url: "https://omagazine.fr/wp-content/uploads/2020/11/plantes-dinterieurs-aloe-vera.jpg",
   care_moments: [
     CareMoment.new(date: Date.today - 2.days, code: :water, points: CareMoment::MOMENTS[:water][:points]),
     CareMoment.new(date: Date.today - 5.days, code: :water, points: CareMoment::MOMENTS[:water][:points]),
@@ -294,7 +294,7 @@ Plant.create!(
   age_in_months: 5,
   size: :small,
   room: 'bedroom',
-  photo_url: "http://www.dietoflife.com/wp-content/uploads/2016/08/Snake-Plants-1.jpg",
+  photo_url: "https://i.pinimg.com/originals/87/fd/5d/87fd5d9be2d5e7c386e52e3413814838.jpg",
   care_moments: [
     CareMoment.new(date: Date.today - 21.days, code: :water, points: CareMoment::MOMENTS[:water][:points]),
   ]
@@ -307,7 +307,7 @@ Plant.create!(
   age_in_months: 2,
   size: :medium,
   room: 'entrance',
-  photo_url: "http://cdn.junglecreations.com/wp/junglecms/2017/10/1-221.jpg",
+  photo_url: "https://i.pinimg.com/736x/e7/68/05/e76805126d303e3316bde119141dea23.jpg",
   care_moments: [
     CareMoment.new(date: Date.today - 2.days, code: :water, points: CareMoment::MOMENTS[:water][:points]),
   ]
@@ -331,7 +331,7 @@ Plant.create!(
   age_in_months: 3,
   size: :small,
   room: 'entrance',
-  photo_url: "https://i.ebayimg.com/images/g/EzUAAOSw-RFaZw33/s-l640.jpg",
+  photo_url: "https://resize-elle.ladmedia.fr/rcrop/638,,forcex/img/var/plain_site/storage/images/deco/exterieur/jardin/plantes/5-plantes-qui-n-ont-pas-besoin-de-beaucoup-de-lumiere-pour-s-epanouir/le-chlorophytum/88351297-1-fre-FR/Le-Chlorophytum.jpg",
   care_moments: [
     CareMoment.new(date: Date.today - 7.days, code: :water, points: CareMoment::MOMENTS[:water][:points]),
   ]
